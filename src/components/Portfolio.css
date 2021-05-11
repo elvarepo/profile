@@ -24,7 +24,7 @@
 }
 
 .customCard .customCard__image {
-	height: 140px;
+	height: 200px;
 }
 
 .customCard .customCard__title {
@@ -42,6 +42,7 @@
 	align-items: center;
 	justify-content: center;
 	max-width: 800px;
+	margin: 0 auto;
 }
 
 .projectDialog .projectDialog__image {
@@ -68,8 +69,4 @@
 
 .projectDialog .projectDialog__icon :hover {
 	color: var(--main-color);
-}
-
-.projectDialog .projectDialog__icon > .MuiSvgIcon-root {
-	fornt-size: 30px !important;
 }

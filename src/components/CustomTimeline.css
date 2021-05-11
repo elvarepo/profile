@@ -24,7 +24,6 @@
 	background-color: var(--main-color);
 	font-size: small;
 	padding: 10px;
-	/* padding for timeline__dot__header ?? */
 }
 
 .timeline .timeline__dot {

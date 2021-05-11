@@ -9,9 +9,6 @@ import TimelineItem from '@material-ui/lab/TimelineItem';
 import TimelineContent from '@material-ui/lab/TimelineContent';
 import TimelineDot from '@material-ui/lab/TimelineDot';
 import CustomButton from './CustomBtn';
-// import TimelineSeparator from '@material-ui/lab/TimelineSeparator';
-// import TimelineDot from '@material-ui/lab/TimelineDot';
-// import TimelineConnector from '@material-ui/lab/TimelineConnector';
 
 
 function Resume() {
@@ -46,13 +43,6 @@ function Resume() {
              >
                 {resumeData.experiences.map(experience => (
                   <TimelineItem>
-                    {/* <TimelineSeparator className='separator__padding' >
-                      <TimelineDot 
-                        varian='outlined'
-                        className='timeline_dot'
-                      />
-                      <TimelineConnector/>
-                    </TimelineSeparator> */}
                     <CustomTimeLineSeparator />
                     <TimelineContent className='timeline_content'>
                       <Typography className="timeline_title">{experience.title} </Typography>
@@ -71,13 +61,6 @@ function Resume() {
              >
                 {resumeData.educations.map(experience => (
                   <TimelineItem>
-                    {/* <TimelineSeparator className='separator__padding' >
-                      <TimelineDot 
-                        varian='outlined'
-                        className='timeline_dot'
-                      />
-                      <TimelineConnector/>
-                    </TimelineSeparator> */}
                     <CustomTimeLineSeparator />
                     <TimelineContent className='timeline_content'>
                       <Typography className="timeline_title">{experience.title} </Typography>
@@ -91,15 +74,6 @@ function Resume() {
         </Grid>
       </Grid>
     </Grid>
-    {/* <CustomTimeline icon={<PersonOutlineOutlinedIcon/>} >
-          <CustomTimelineItem title='Name' text={resumeData.name}/>
-          <CustomTimelineItem title='Title' text={resumeData.title}/>
-          <CustomTimelineItem title='Email' text={resumeData.email}/>
-
-          {Object.keys(resumeData.socials).map((key,idx) => (
-            <CustomTimelineItem key={idx} title={key} text={resumeData.socials[key].text} link={resumeData.socials[key].text} />
-          ))}
-        </CustomTimeline> */}
 
     {/* Services  */}
     <Grid container className='section pb__45' >
@@ -124,7 +98,6 @@ function Resume() {
 
     {/* Skills  */}
     <Grid 
-      // xs={12}
       container  
       spacing={3} 
       justify='space-between' 
@@ -206,7 +179,7 @@ function Resume() {
             <Grid container className='contactInfo__socialsContainer'>
               {Object.keys(resumeData.socials).map(key => (
                 <Grid item className='contactInfo__social'>
-                  <a href={resumeData.socials[key].link}  target='_blank'>
+                  <a href={resumeData.socials[key].link}  target='_blank' rel='noreferrer'>
                     {resumeData.socials[key].icon}
                   </a>
                 </Grid>

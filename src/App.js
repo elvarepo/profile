@@ -1,5 +1,5 @@
 import './App.css';
-import { Container, Grid, Paper, makeStyles } from '@material-ui/core';
+import { Container, Grid } from '@material-ui/core';
 import Profile from './components/Profile';
 import Header from './components/Header';
 import Portfolio from './components/Portfolio';
@@ -9,14 +9,12 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 function App() {
   return (
-    // <div className="app">
       <Container className="top__60">
         <Grid container spacing={7} className="grid__container">
           <Grid item xs={12} sm={12} md={4} lg={3} >
             <Profile/>
           </Grid>
 
-          {/* <Grid item xs style={{border:"1px solid purple"}}> */}
           <Grid item xs>
             <Router>
               <Header/>
@@ -32,7 +30,6 @@ function App() {
           </Grid> 
         </Grid>
       </Container>
-    // {/* </div> */}
   );
 }
 

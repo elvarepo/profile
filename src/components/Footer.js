@@ -13,9 +13,9 @@ function Footer() {
       </div>
       <div className='footter__right'>
         <Typography className='footer__copyright'>
-          Designed and Developed by <a href='/' target='_blank'>Elva Wang</a>
+          Designed and Developed by <a href='/' target='_blank' rel='noreferrer'>Elva Wang</a>
           <br/>
-          Clone idea from <a href='https://themeforest.net/user/travonline'  target='_blank'>Travonline</a>
+          Clone idea from <a href='https://themeforest.net/user/travonline'  target='_blank' rel='noreferrer'>Travonline</a>
         </Typography>
       </div>
     </div>

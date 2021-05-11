@@ -15,7 +15,7 @@ const CustomTimelineItem = ({title, text, link}) => {
       <CustomTimeLineSeparator/>
       <TimelineContent className='timeline__content'>
         {link ? (<Typography className='timelineItem__text'>
-          <span>{title}:</span> <a href={link} target="_blank">{text}</a>
+          <span>{title}:</span> <a href={link} target="_blank" rel='noreferrer'>{text}</a>
         </Typography >) : (
           <Typography className='timelineItem__text'>
             <span>{title}:</span>{text}
@@ -45,11 +45,11 @@ function Profile() {
           <CustomTimelineItem title='Email' text={resumeData.email}/>
 
           {Object.keys(resumeData.socials).map((key,idx) => (
-            <CustomTimelineItem key={idx} title={key} text={resumeData.socials[key].text} link={resumeData.socials[key].text} />
+            <CustomTimelineItem key={idx} title={key} text={resumeData.socials[key].text} link={resumeData.socials[key].link} />
           ))}
         </CustomTimeline>
         <br/>
-        {/* <button>Download Cv</button> */}
+        
         <div className="button__container" >
           <CustomButton text={'Download Cv'} icon={<GetAppIcon/>} />
         </div>

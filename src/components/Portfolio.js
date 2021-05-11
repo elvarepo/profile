@@ -5,10 +5,9 @@ import resumeData from '../uitilities/resumeData';
 import CustomGallery from './CustomGallery';
 
 function Portfolio() {
-  const [tabValue, setTabValue] = useState('All');
+  const [tabValue, setTabValue] = useState('All React Projects');
   const [projectDialog, setProjectDialog] = useState(false);
 
-  console.log(projectDialog)
   return (
     <Grid  container className='section pb__45 pt__45'>
       {/* Title */}
@@ -25,24 +24,24 @@ function Portfolio() {
           className='customTabs'
           onChange={(event, newValue) => setTabValue(newValue)}
         >
-          <Tab label='All' value='All' className={tabValue === 'All' ? 'customTabs__item active' : 'customTabs__item'} />
+          <Tab label='All React Projects' value='All React Projects' className={tabValue === 'All React Projects' ? 'customTabs__item active' : 'customTabs__item'} />
 
-          {[...new Set(resumeData.projects.map(item => item.tag))].map(tag => (
-            <Tab label={tag} value={tag} className={tabValue === tag ? 'customTabs__item active' : 'customTabs__item'}/>
+          {[...new Set(resumeData.projects.map(item => item.tag))].map((tag,i ) => (
+            <Tab key={i} label={tag} value={tag} className={tabValue === tag ? 'customTabs__item active' : 'customTabs__item'}/>
           ))}
         </Tabs>
       </Grid>
 
       {/* Projects */}
-      <Grid xs={12}>
+      <Grid item xs={12}>
         <Grid container spacing={3} className={'p__30'} >
-          {resumeData.projects.map(project => (
+          {resumeData.projects.map((project,i ) => (
             <>
-            {tabValue == project.tag || tabValue == 'All' ? (
+            {tabValue === project.tag || tabValue === 'All React Projects' ? (
             <Grid item xs={12} sm={6} >
               <Grow in timeout={1000}>
-                <Card className='customCard' onClick={() => setProjectDialog(project)}>
-                  <CardActionArea>
+                <Card key={i} className='customCard' onClick={() => setProjectDialog(project)}>
+                  <CardActionArea >
                     <CardMedia className='customCard__image' image={project.images[0]} title={project.title}/>
                     <CardContent>
                       <Typography className="customCard__title" variant='body2'>{project.title} </Typography>
@@ -79,16 +78,19 @@ function Portfolio() {
         </DialogContent>
 
         <DialogActions className='projectDialog__actions'>
-          {projectDialog?.links?.map(link => (
+          {projectDialog?.links?.map((link, i) => (
             <a 
+              key={i}
               href={link.link} 
               target='_blank' 
+              rel='noreferrer'
               className='projectDialog__icon'>
               {link.icon}
             </a>
           ))}
         </DialogActions>
     </Dialog>
+
     </Grid>
   )
 }

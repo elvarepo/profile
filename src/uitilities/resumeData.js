@@ -1,25 +1,19 @@
-import FacebookIcon from '@material-ui/icons/Facebook';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
-// import { WebOutlinedIcon } from '@material-ui/icons';
 import AssignmentOutlinedIcon from '@material-ui/icons/AssignmentOutlined';
 import WebOutlinedIcon from '@material-ui/icons/WebOutlined';
-import { GitHub, Language, YouTube } from '@material-ui/icons';
+// import { GitHub} from '@material-ui/icons';
+import LinkIcon from '@material-ui/icons/Link';
 
 export default {
   name: 'Elva Wang',
-  title: 'Full stack developer',
+  title: 'Full stack React developer',
   birthday: '',
   email: 'Elva316@gmail.com',
   phone: '+1 408 6379917',
   address: 'San Jose, CA',
   socials: {
-    Facebook: {
-      link: 'https://www.facebook.com',
-      text: 'Elva',
-      icon: <FacebookIcon />
-    },
     Twitter: {
       link: 'https://twitter.com/home',
       text: 'Twitter',
@@ -109,91 +103,117 @@ export default {
   ],
   projects: [
     {
-      tag: 'React',
+      tag: 'Stripe_Payment',
       images:[
-      'https://cdn-0.therandomvibez.com/wp-content/uploads/2017/09/Good-Night-Images-1.jpg',
-      'https://1.bp.blogspot.com/-DyuEv3YfGpU/X0M3K8yXkwI/AAAAAAAACSg/J39dP8Yj0kIr8Rn6D3zDwLX7Q0j9xqDrACNcBGAsYHQ/s2048/beautiful%2Bgood%2Bnight%2Bimages%2Bwith%2Bred%2Bcandle.jpg'
+        require(`../images/projects/amazon1.png`).default,
+        require(`../images/projects/amazon2.png`).default,
+        require(`../images/projects/amazon3.png`).default,
       ],
-      title: 'React Project 1',
+      title: 'Amazon',
       caption: 'A short description.',
       description: 'This is my project description. Please fill it in.',
       links: [
-        { link: 'https://www.google.com', icon: <YouTube /> },
-        { link: 'https://www.google.com', icon: <GitHub /> },
-        { link: 'https://www.google.com', icon: <Language /> },       
+        { link: 'https://github.com/elvaworkingstation/amazon-clone/tree/master', icon: <GitHubIcon /> },
+        { link: 'https://clone-fa79a.web.app', icon: <LinkIcon /> },  
       ]
     },
     {
-      tag: 'React',
+      tag: 'Stripe_Payment',
       images:[
-        'https://cdn.britannica.com/84/73184-004-E5A450B5/Sunflower-field-Fargo-North-Dakota.jpg',
-        'https://cdn.britannica.com/84/73184-004-E5A450B5/Sunflower-field-Fargo-North-Dakota.jpg',
+        require(`../images/projects/p11.png`).default,
+        require(`../images/projects/p12.png`).default,
+        require(`../images/projects/p13.png`).default,
       ],
-      title: 'React Project 2',
+      title: 'Consumer Posts',
       caption: 'A short description.',
       description: 'This is my project description. Please fill it in.',
       links: [
-        { link: 'https://www.google.com', icon: <YouTube /> },
-        { link: 'https://www.google.com', icon: <GitHub /> },
-        { link: 'https://www.google.com', icon: <Language /> },       
+        { link: 'https://github.com/elvaworkingstation/consumer-voice', icon: <GitHubIcon /> },
+        { link: 'https://consumer-voice.web.app/', icon: <LinkIcon /> },       
       ]
     },
     {
-      tag: 'Python',
+      tag: 'Alan_AI',
       images:[
-        'https://cdn-0.therandomvibez.com/wp-content/uploads/2017/09/Good-Night-Images-1.jpg',
-        'https://1.bp.blogspot.com/-DyuEv3YfGpU/X0M3K8yXkwI/AAAAAAAACSg/J39dP8Yj0kIr8Rn6D3zDwLX7Q0j9xqDrACNcBGAsYHQ/s2048/beautiful%2Bgood%2Bnight%2Bimages%2Bwith%2Bred%2Bcandle.jpg'
+        require(`../images/projects/ai1.png`).default,
+        require(`../images/projects/ai2.png`).default,
       ],
-      title: 'Python Project 1',
+      title: 'Alan AI',
       caption: 'A short description.',
       description: 'This is my project description. Please fill it in.',
       links: [
-        { link: 'https://www.google.com', icon: <YouTube /> },
-        { link: 'https://www.google.com', icon: <GitHub /> },
-        { link: 'https://www.google.com', icon: <Language /> },       
+        { link: 'https://github.com/elvaworkingstation/react-alan-ai-voice-application', icon: <GitHubIcon /> },
+        { link: 'https://alan-ai-project.web.app', icon: <LinkIcon /> },       
       ]
     },
     {
-      tag: 'Java',
+      tag: 'Movie_Music_API',
       images:[
-        'https://cdn-0.therandomvibez.com/wp-content/uploads/2017/09/Good-Night-Images-1.jpg',
+        require(`../images/projects/netflex2.png`).default,
       ],
-      title: 'Java Project 1',
+      title: 'Netflex',
       caption: 'A short description.',
       description: 'This is my project description. Please fill it in.',
       links: [
-        { link: 'https://www.google.com', icon: <YouTube /> },
-        { link: 'https://www.google.com', icon: <GitHub /> },
-        { link: 'https://www.google.com', icon: <Language /> },       
+        { link: 'https://github.com/elvaworkingstation/netflix_alike', icon: <GitHubIcon /> },
+        { link: 'https://netflix-alike.web.app/', icon: <LinkIcon /> },       
       ]
     },
     {
-      tag: 'Java',
+      tag: 'Chat',
       images:[
-        'https://cdn-0.therandomvibez.com/wp-content/uploads/2017/09/Good-Night-Images-1.jpg',
+        require(`../images/projects/slack2.png`).default,
+        require(`../images/projects/slack1.png`).default,
       ],
-      title: 'Java Project 1',
+      title: 'Slack',
       caption: 'A short description.',
       description: 'This is my project description. Please fill it in.',
       links: [
-        { link: 'https://www.google.com', icon: <YouTube /> },
-        { link: 'https://www.google.com', icon: <GitHub /> },
-        { link: 'https://www.google.com', icon: <Language /> },       
+        { link: 'https://github.com/elvaworkingstation/slack-clone/tree/master', icon: <GitHubIcon /> },
+        { link: 'https://slack-clone-b18a6.web.app/', icon: <LinkIcon /> },       
       ]
     },{
-      tag: 'Java',
+      tag: 'UI',
       images:[
-        'https://cdn-0.therandomvibez.com/wp-content/uploads/2017/09/Good-Night-Images-1.jpg',
+        require(`../images/projects/gmail1.png`).default,
+        require(`../images/projects/gmail2.png`).default,
       ],
-      title: 'Java Project 1',
+      title: 'Gmail',
       caption: 'A short description.',
       description: 'This is my project description. Please fill it in.',
       links: [
-        { link: 'https://www.google.com', icon: <YouTube /> },
-        { link: 'https://www.google.com', icon: <GitHub /> },
-        { link: 'https://www.google.com', icon: <Language /> },       
+        { link: 'https://github.com/elvaworkingstation/gmail', icon: <GitHubIcon /> },       
+        { link: 'https://clone-d421b.web.app', icon: <LinkIcon /> },
       ]
-    }
-
+    },
+    {
+      tag: 'Movie_Music_API',
+      images:[
+      require(`../images/projects/spotify2.png`).default,
+      require(`../images/projects/spotify1.png`).default,
+      ],
+      title: 'Spotify',
+      caption: 'A short description.',
+      description: 'This is my project description. Please fill it in.',
+      links: [
+        { link: 'https://github.com/elvaworkingstation/spotify', icon: <GitHubIcon /> },
+        { link: 'https://spotify-d4c74.web.app/', icon: <LinkIcon /> },       
+      ]
+    },
+    {
+      tag: 'Camera',
+      images:[
+      require(`../images/projects/snapChat1.png`).default,
+      require(`../images/projects/snapChat2.png`).default,
+      require(`../images/projects/snapChat3.png`).default,
+      ],
+      title: 'snapchat',
+      caption: 'A short description.',
+      description: 'This is my project description. Please fill it in.',
+      links: [
+        { link: 'https://github.com/elvaworkingstation/snapchat-alike/tree/master', icon: <GitHubIcon /> },
+        { link: 'https://snapchat-alike.web.app/', icon: <LinkIcon /> },       
+      ]
+    },
   ]
 }
