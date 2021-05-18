@@ -1,5 +1,9 @@
 /* Tabs */
 
+.customTags .MuiTabs-scroller {
+	overflow-x: scroll !important;
+}
+
 .customTabs .customTabs__item {
 	padding: 0px !important;
 	min-width: 0px !important;
@@ -41,12 +45,17 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	max-width: 800px;
+	max-width: 700px;
+	height: auto;
 	margin: 0 auto;
 }
 
+/* .projectDialog::-webkit-scrollbar {
+	display: none;
+} */
+
 .projectDialog .projectDialog__image {
-	max-height: 300px;
+	max-height: 270px;
 	width: 100%;
 	object-fit: cover;
 	object-position: center center;
@@ -54,6 +63,22 @@
 
 .projectDialog .projectDialog__description {
 	margin-top: 10px !important;
+}
+
+.projectDialog__description p {
+	margin-bottom: -3px;
+	font-size: 14px;
+	margin: 0;
+}
+
+.projectDialog__description span {
+	font-weight: bold;
+}
+
+.projectDialog__description ul {
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
 }
 
 .projectDialog .projectDialog__actions {
@@ -69,4 +94,8 @@
 
 .projectDialog .projectDialog__icon :hover {
 	color: var(--main-color);
+}
+
+::-webkit-scrollbar {
+	display: none;
 }

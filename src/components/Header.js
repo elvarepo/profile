@@ -6,12 +6,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { NavLink, withRouter } from 'react-router-dom';
 import resumeData from '../uitilities/resumeData';
 import CustomButton from './CustomBtn';
+import Resume from '../images/elva.pages';
+
 
 function Header(props) {
+
   const pathName = props?.location?.pathname;
+
   return (
     <Navbar expand='lg' stikcy='top' className='header'>
-      <Nav.Link as={NavLink} to='/' className='header__navLink'>
+      <Nav.Link as={NavLink} to='/' className='header__navLink' href='#id'>
         <Navbar.Brand className='header__home'>
           <HomeRounded/>
         </Navbar.Brand>
@@ -34,7 +38,10 @@ function Header(props) {
               {resumeData.socials[key].icon}
             </a>
           ))}
-          <CustomButton text='Hire me' icon={<Telegram/>} />
+          <a href={Resume} download='elva.pages' target="_blank" rel="noopener noreferrer"  
+          style={{'text-decoration': 'none'}}>
+            <CustomButton   text='Hire me' icon={<Telegram/>}/>
+          </a>
         </div>
       </Navbar.Collapse>
     </Navbar>

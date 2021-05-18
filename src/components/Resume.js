@@ -10,9 +10,8 @@ import TimelineContent from '@material-ui/lab/TimelineContent';
 import TimelineDot from '@material-ui/lab/TimelineDot';
 import CustomButton from './CustomBtn';
 
-
 function Resume() {
-  console.log(resumeData)
+
   return (
     <>
     {/* About me  */}
@@ -21,9 +20,20 @@ function Resume() {
         <span></span>
         <h6 className='section__title__text'>About Me</h6>
       </Grid>
-      <Grid item xs='12'>
+      <Grid item xs={12}>
         <span></span>
         <Typography variant='body2' className='aboutme__text'>{resumeData.about}</Typography>
+      </Grid>
+    </Grid>
+
+    <Grid container className='section pb__45' >
+      <Grid item className='section__title mb__30' >
+        <span></span>
+        <h6 className='section__title__text'>Technical Experiences</h6>
+      </Grid>
+      <Grid item xs={12}>
+        <span></span>
+        <Typography variant='body2' className='aboutme__text'>{resumeData.techExpirences}</Typography>
       </Grid>
     </Grid>
 
@@ -33,21 +43,25 @@ function Resume() {
         <span></span>
         <h6 className='section__title__text'>Resume</h6>
       </Grid>
-      <Grid item xs='12'>
+      <Grid item xs={12}>
         <Grid container className='resume_timeline'>
           {/* Experiences */}
-          <Grid item sm={12} md={6}>
+          <Grid className="work_overflow" item sm={12} md={6}>
             <CustomTimeline 
               title="Work Experiences"
               icon={<WorkIcon/>}
              >
-                {resumeData.experiences.map(experience => (
-                  <TimelineItem>
+                {resumeData.experiences.map((experience, idx) => (
+                  <TimelineItem key={idx}>
                     <CustomTimeLineSeparator />
                     <TimelineContent className='timeline_content'>
-                      <Typography className="timeline_title">{experience.title} </Typography>
-                      <Typography className="timeline_date" variant='caption'>{experience.date} </Typography>
-                      <Typography className="timeline_description" variant="body2">{experience.description} </Typography>
+                      <Typography className="timeline_title">
+                        {experience.title} <span className='timeline_date'>{experience.date}</span>
+                      </Typography>
+
+                        <ul className="timeline_description" variant="body2">{experience.description.map((ex , i) => (
+                        <li key={i}>{ex}</li>
+                      ))} </ul>
                     </TimelineContent>
                   </TimelineItem>
                 ))}
@@ -59,13 +73,17 @@ function Resume() {
               title="Education"
               icon={<SchoolIcon/>}
              >
-                {resumeData.educations.map(experience => (
-                  <TimelineItem>
+                {resumeData.educations.map((education, idx) => (
+                  <TimelineItem key={idx}>
                     <CustomTimeLineSeparator />
                     <TimelineContent className='timeline_content'>
-                      <Typography className="timeline_title">{experience.title} </Typography>
-                      <Typography className="timeline_date" variant='caption'>{experience.date} </Typography>
-                      <Typography className="timeline_description" variant="body2">{experience.description} </Typography>
+                      <Typography className="timeline_title">
+                        {education.title} <span className='timeline_date'>{education.date}</span>
+                      </Typography>
+                     
+                      <ul className="timeline_description" variant="body2">{education.description.map((ed , i) => (
+                        <li key={i}>{ed}</li>
+                      ))} </ul>
                     </TimelineContent>
                   </TimelineItem>
                 ))}
@@ -81,10 +99,10 @@ function Resume() {
         <span></span>
         <h6 className='section__title__text'>My Services</h6>
       </Grid>
-      <Grid item xs='12'>
+      <Grid item xs={12}>
         <Grid container spacing={3} justify='space-around'>
-          {resumeData.services.map( service => (
-            <Grid item xs={12} sm={6} md={3}>
+          {resumeData.services.map( (service,i) => (
+            <Grid item xs={12} sm={6} md={3} key={i}>
               <div className='service'>
                 <Icon className='service__icon'>{service.icon}</Icon>
                 <Typography className='service__title' variant='h6'>{service.title}</Typography>
@@ -102,13 +120,13 @@ function Resume() {
       spacing={3} 
       justify='space-between' 
       className='section graybg pb__45 p__50'>
-        {resumeData.skills.map(skill => (
-          <Grid item xs={12} sm={6} md={3}>
+        {resumeData.skills.map((skill, idx) => (
+          <Grid item xs={12} sm={6} md={3} key={idx}>
             <Paper elevation={0} className='skill'>
               <Typography variant='h6' className='skill__title'>
                 {skill.title}
-                {skill.description.map(element => (
-                  <Typography variant='body2' className='skill__description'>
+                {skill.description.map((element, i) => (
+                  <Typography key={i} variant='body2' className='skill__description'>
                     <TimelineDot variant={'outlined'} className='timeline__dot'/>
                     {element}
                   </Typography>
@@ -129,25 +147,28 @@ function Resume() {
           </Grid>
 
           <Grid item xs={12}>
-            <Grid container spacing={2}>
-              <Grid item xs={12} sm={6}>
-                  <TextField fullWidth name='name' label='name'/>
+            <form action="https://formsubmit.co/elva316@gmail.com" method="POST">
+              <Grid container spacing={2}>
+
+                <Grid className="contact_input"  item xs={12} sm={6}>
+                  <TextField fullWidth name='name' label='Name' required/>
+                </Grid>
+                <Grid className="contact_input" item xs={12} sm={6} >
+                    <TextField fullWidth name='email' label='email' type='email' required />
+                </Grid>
+                <Grid item xs={12}>
+                    <TextField fullWidth name='message' label='Message' multiline  rows={4} required/>
+                </Grid>
+
+                <Grid item xs={12} className='top__30' >
+                  <CustomButton text='Submit' type='submit'/>
+                </Grid>
               </Grid>
-              <Grid item xs={12} sm={6}>
-                  <TextField fullWidth name='email' label='email'/>
-              </Grid>
-              <Grid item xs={12}>
-                  <TextField fullWidth name='message' label='message' multiline  rows={4}/>
-              </Grid>
-              <Grid className='top__30' >
-                <CustomButton text='Submit'/>
-              </Grid>
-            </Grid>
-          </Grid>
+            </form>
+          </Grid> 
         </Grid>
       </Grid>
 
-      {/* <Grid item sm={12} md={6}> */}
       <Grid item xs={12} lg={5} >
         <Grid container>
           <Grid item className='section__title mb__30'>
@@ -177,8 +198,8 @@ function Resume() {
 
           <Grid item xs={12}>
             <Grid container className='contactInfo__socialsContainer'>
-              {Object.keys(resumeData.socials).map(key => (
-                <Grid item className='contactInfo__social'>
+              {Object.keys(resumeData.socials).map((key,i) => (
+                <Grid key={i} item className='contactInfo__social'>
                   <a href={resumeData.socials[key].link}  target='_blank' rel='noreferrer'>
                     {resumeData.socials[key].icon}
                   </a>

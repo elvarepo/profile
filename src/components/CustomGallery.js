@@ -4,7 +4,7 @@ import './CustomGallery.css';
 import 'react-image-gallery/styles/css/image-gallery.css';
 
 function CustomGallery({images}) {
-  const imagesList = images?.map( image => {
+  const imagesList = images?.map( (image, i) => {
     return {
       original: image,
       thumbnail:image,

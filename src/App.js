@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 function App() {
+  
   return (
       <Container className="top__60">
         <Grid container spacing={7} className="grid__container">
