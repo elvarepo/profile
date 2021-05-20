@@ -8,7 +8,7 @@ import TimelineItem from "@material-ui/lab/TimelineItem"
 import PersonOutlineOutlinedIcon from '@material-ui/icons/PersonOutlineOutlined';
 import CustomButton from './CustomBtn';
 import GetAppIcon from '@material-ui/icons/GetApp';
-import Resume from '../images/elva.pages';
+import Resume from '../images/elva1.pdf';
 
 const CustomTimelineItem = ({title, text, link}) => {
   return (
@@ -52,8 +52,7 @@ function Profile() {
         <br/>
         
         <div className="button__container" >
-          <a href={Resume} download='elva.pages' target="_blank" rel="noopener noreferrer" 
-          style={{'text-decoration': 'none'}} >
+          <a href={Resume} download='elva.pdf' target="_blank" rel="noopener noreferrer" style={{'textDecoration': 'none'}} >
             <CustomButton   text={'Download Cv'} icon={<GetAppIcon/>} />
           </a>
         </div>

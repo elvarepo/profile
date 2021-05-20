@@ -10,7 +10,7 @@ import TimelineContent from '@material-ui/lab/TimelineContent';
 import TimelineDot from '@material-ui/lab/TimelineDot';
 import CustomButton from './CustomBtn';
 
-function Resume() {
+function Resume() {  
 
   return (
     <>
@@ -138,7 +138,7 @@ function Resume() {
     </Grid>
 
     {/* Contact */}
-    <Grid container spacing={6} className='section pt__45 pb__45'>
+    <Grid id='contact' container spacing={6} className='section pt__45 pb__45'>
       <Grid item xs={12} lg={7} className='mb__30'>
         <Grid container>
           <Grid item className='section__title mb__30'>

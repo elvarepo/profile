@@ -8,7 +8,7 @@ import Footer from './components/Footer';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 function App() {
-  
+
   return (
       <Container className="top__60">
         <Grid container spacing={7} className="grid__container">
@@ -18,11 +18,11 @@ function App() {
 
           <Grid item xs>
             <Router>
-              <Header/>
+              <Header />
               <div className='main__content container__shadow'>
                 <Switch>
                   <Route path="/portfolio" component={Portfolio} />
-                  <Route path="/" component={Resume} />
+                  <Route path="/" component={Resume}/> 
                 </Switch>
               </div>
             </Router>

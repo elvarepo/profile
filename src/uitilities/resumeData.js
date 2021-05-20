@@ -9,14 +9,14 @@ import PhonelinkIcon from '@material-ui/icons/Phonelink';
 
 const resumeData = {
   name: 'Elva Wang',
-  title: 'Full stack React developer',
+  title: 'Full-stack React developer',
   birthday: '',
   email: 'Elva316@gmail.com',
   phone: '+1 408 6379917',
   address: 'San Jose, CA',
   socials: {
     Twitter: {
-      link: 'https://twitter.com/home',
+      link: 'https://twitter.com/Elva_316',
       text: 'Twitter',
       icon: <TwitterIcon />
     },
@@ -32,21 +32,21 @@ const resumeData = {
     }
   },
 
-  about: "I am a hands-on full stack ReactJs developer with experience in designing and developing websites and applications using a varied range of technologies and programming languages. I have proven ability to build interactive and user friendly websites and applications. I am personally known to be a very hard working, passionate, adaptable and skilled individual, always striving to get better and achieve.",
+  about: "I am a hands-on full-stack ReactJS developer with experience in designing and developing fully interactive, user friendly websites and applications from scratch using a varied range of technologies and programming languages. I am personally known to be a very hard-working, passionate, adaptable and skilled individual, always striving to get better and achieve more.",
 
-  techExpirences:"Web Technologies: \n ReactJS, React Redux and Context, HTML, HTML5, CSS3, SASS, JavaScript, AJAX, jQuery, JSON, Twitter Bootstrap, Material UI, WordPress, Angular JS 2+, ExpressJS, NodeJS, GitHub, Python, Django, RESTful API,\n\n Hosting/Deployment: \n Firebase, AWS, Heroku, Bluehost, Github",
+  techExpirences:"Web Technologies: \n ReactJS, React Redux and Context, HTML, HTML5, CSS3, SASS, JavaScript, AJAX, jQuery, JSON, Bootstrap, Material UI, WordPress, Angular JS 2+, ExpressJS, NodeJS, GitHub, Python, Django, RESTful API \n\n Hosting/Deployment: \n Firebase, AWS, Heroku, Bluehost, Github",
   experiences: [
     {
-      title:'ReactJS Developer',
-      date: '06/2020 - Present',
+      title:'ReactJS Projects',
+      date: '07/2020 - Present',
       description:[
-        'Built multiple personal projects with ReactJS, Redux/Context, Firebase, Material UI, third-party API, and RESTful API',
-        'Delpoyed all of them on firebase, www.elvaswork.info'
+        'Built and deployed multiple personal projects with ReactJS, Redux/Context, Firebase, Material UI, third-party API, and RESTful API',
+        'Check out the projects at www.elvaswork.info'
     ]
     }, 
     {
       title:'Technical Recuiter',
-      date: '01/19 - 06/2020',
+      date: '01/19 - 05/2020',
       description:[
         'Recruiting Full-stack developers, UI/UX designers, Programming Managers, Big Data, Dev-Ops, Front-end, Back-end, Machine Learning, industrial designers etc',
     ]
@@ -66,7 +66,7 @@ const resumeData = {
     }, 
     {
       title:'Web Developer - Freelancer',
-      date: '12/16 - 09/2017',
+      date: '12/16 - 07/2017',
       description:[
         "Consulted and designed wireframes, and prototyped for customers",
         "Developed web apps for client that services thousands of customers",
@@ -81,7 +81,8 @@ const resumeData = {
       title:'Coding Dojo Bootcamp',
       date: '2017',
       description:[
-        "Successfully completed a 14 week intensive onsite development program, devoting more than 1,800 hours of coding. Achieved Triple Black Belt standing, highest level of achievement, only awarded upon building fully functional CRUD app projects and deploying them onto AWS from scratch.",
+        "Successfully completed a 14 week intensive onsite development program, devoting more than 1,800 hours of coding.", 
+        "Achieved Triple Black Belt standing, highest level of achievement, only awarded upon building fully functional CRUD app projects and deploying them onto AWS from scratch.",
         'Learned and praticed ReactJS, Redux and Context, IOS/Swift, MEAN stack, Python Django'
       ]
     }, 
@@ -96,7 +97,7 @@ const resumeData = {
   services: [
     {
       title: 'Software Development',
-      description:'I have built projects with Javascript, Python and IOS',
+      description:'I have built projects with Javascript, Python and iOS',
       icon: <PhonelinkIcon/>
     }, 
     {
@@ -106,7 +107,7 @@ const resumeData = {
     }, 
     {
       title: 'Challenge Me',
-      description:"Doubt about my knowledge or experience? Challenge me!",
+      description:"Curious about my knowledge or experience? Reach out!",
       icon: <AssignmentOutlinedIcon/>
     }, 
   ],
@@ -196,7 +197,7 @@ const resumeData = {
       caption: 'Netflex Clone',
       description:<>
                     <p><span>Front-end:</span> React, Material UI </p> 
-                    <p><span>Third-party API:</span> TMDB API</p>
+                    <p><span>Third-party API:</span> IMDB API</p>
                     <p><span>Host/Deployment:</span> Firebase</p>
                   </>,
       links: [
