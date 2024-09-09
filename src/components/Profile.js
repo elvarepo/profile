@@ -8,7 +8,7 @@ import TimelineItem from "@material-ui/lab/TimelineItem"
 import PersonOutlineOutlinedIcon from '@material-ui/icons/PersonOutlineOutlined';
 import CustomButton from './CustomBtn';
 import GetAppIcon from '@material-ui/icons/GetApp';
-import Resume from '../images/elva1.pdf';
+import Resume from '../images/elva2024.pdf';
 
 const CustomTimelineItem = ({title, text, link}) => {
   return (
@@ -37,7 +37,7 @@ function Profile() {
       </div>
 
       <figure className="profile__image">
-        <img src={require('../images/m1.jpg').default} alt="" />
+        {/* <img src={require('../images/m1.jpg').default} alt="" /> */}
       </figure>
       <div className="profile__info">
         <CustomTimeline icon={<PersonOutlineOutlinedIcon/>} >

@@ -23,9 +23,9 @@ function Header({ location }) {
       <Navbar.Toggle />
       <Navbar.Collapse>
         <Nav className='header__left'>
-          <Nav.Link as={NavLink} to='/' className={pathName === '/' ? 'header_link_active' : 'header_link'} >
+          {/* <Nav.Link as={NavLink} to='/' className={pathName === '/' ? 'header_link_active' : 'header_link'} >
             Resume
-          </Nav.Link>
+          </Nav.Link> */}
           <Nav.Link as={NavLink} to='/portfolio' className={pathName === '/portfolio' ? 'header_link_active' : 'header_link'} >
             Portfolio
           </Nav.Link>
